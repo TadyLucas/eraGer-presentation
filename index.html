@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Slideshow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+    <a href="#" onclick="showSlides('home')">Home</a>
+
+    <!-- Work Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn">Work ▾</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSlides('work')">All Work</a>
+            <a href="#" onclick="showSlides('work', 'work1w')">1w</a>
+            <a href="#" onclick="showSlides('work', 'work2w')">2w</a>
+        </div>
+    </div>
+
+    <!-- Culture Dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn">Culture ▾</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSlides('culture')">All Culture</a>
+            <a href="#" onclick="showSlides('culture', 'culture-leipzig')">Leipzig</a>
+            <a href="#" onclick="showSlides('culture', 'culture-berlin')">Berlin</a>
+        </div>
+    </div>
+
+    <a href="#" onclick="showSlides('freetime')">Freetime</a>
+</nav>
+
+    <!-- Slideshow Container -->
+    <div class="slideshow-container">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        
+        <div class="slides-wrapper">
+            <div class="slide home">
+                <div class="image-container">
+                    <img src="assets/pg.webp" alt="Home">
+                </div>
+                <div class="content">
+                    <h2>Home</h2>
+                    <p>This is the home section.</p>
+                </div>
+            </div>
+            <div class="slide work work1w">
+                <div class="image-container">
+                    <img src="assets/pg.webp" alt="Work 1w">
+                </div>
+                <div class="content">
+                    <h2>Work - 1w</h2>
+                    <p>Description of 1-week work.</p>
+                </div>
+            </div>
+            <div class="slide work work2w">
+                <div class="image-container">
+                    <img src="assets/pg.webp" alt="Work 2w">
+                </div>
+                <div class="content">
+                    <h2>Work - 2w</h2>
+                    <p>Description of 2-week work.</p>
+                </div>
+            </div>
+            <div class="slide culture culture-leipzig">
+                <div class="image-container">
+                    <img src="assets/liepzig.jpeg" alt="Leipzig">
+                </div>
+                <div class="content">
+                    <h2>Culture - Leipzig</h2>
+                    <p>Explore Leipzig's culture.</p>
+                </div>
+            </div>
+            <div class="slide culture culture-berlin">
+                <div class="image-container">
+                    <img src="assets/berlin.jpeg" alt="Berlin">
+                </div>
+                <div class="content">
+                    <h2>Culture - Berlin</h2>
+                    <p>Explore Berlin's culture.</p>    
+                </div>
+            </div>
+            <div class="slide freetime">
+                <div class="image-container">
+                    <img src="assets/pg.webp" alt="Freetime">
+                </div>
+                <div class="content">
+                    <h2>Freetime</h2>   
+                    <p>Enjoy your free time.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

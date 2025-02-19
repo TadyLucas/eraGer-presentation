@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: black;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a, .dropbtn {
+    color: black;
+    text-decoration: none;
+    padding: 12px 18px;
+    margin: 0 12px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover, .dropbtn:hover {
+    background-color: #ddd;
+}
+
+/* Dropdown */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 130px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    display: block;
+    text-align: left;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #eee;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 80%;
+    height: 550px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+}
+
+/* Image Section */
+.image-container {
+    height: 60%;
+    background: #ddd;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Section */
+.content {
+    height: 40%;
+    padding: 20px;
+    background: white;
+    text-align: center;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}

@@ -3,128 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slideshow from germany</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icon.png">
+    <title>Slideshow from Germany</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
-    <a href="#" onclick="showSlides('home')">Home</a>
+        <a href="#" onclick="showSlides('home')">Home</a>
 
-    <!-- Work Dropdown -->
-    <div class="dropdown">
-        <button class="dropbtn" onclick="showSlides('work')">Work ▾</button>
-        <div class="dropdown-content">
-            <a href="#" onclick="showSlides('work', 'work1w')">1w</a>
-            <a href="#" onclick="showSlides('work', 'work2w')">2w</a>
+        <!-- Work Dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="showSlides('work')">Work ▾</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSlides('work', 'work1w')">1w</a>
+                <a href="#" onclick="showSlides('work', 'work2w')">2w</a>
+            </div>
         </div>
-    </div>
 
-    <!-- Culture Dropdown -->
-    <div class="dropdown">
-        <button class="dropbtn" onclick="showSlides('culture')">Culture ▾</button>
-        <div class="dropdown-content">
-            <a href="#">All Culture</a>
-            <a href="#" onclick="showSlides('culture', 'culture-leipzig')">Leipzig</a>
-            <a href="#" onclick="showSlides('culture', 'culture-berlin')">Berlin</a>
+        <!-- Culture Dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn" onclick="showSlides('culture')">Culture ▾</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSlides('culture', 'culture-leipzig')">Leipzig</a>
+                <a href="#" onclick="showSlides('culture', 'culture-berlin')">Berlin</a>
+            </div>
         </div>
-    </div>
 
-    <a href="#" onclick="showSlides('freetime')">Freetime</a>
-</nav>
+        <a href="#" onclick="showSlides('freetime')">Freetime</a>
+    </nav>
 
     <!-- Slideshow Container -->
     <div class="slideshow-container">
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-        
-        <div class="slides-wrapper">
-            <div class="slide home">
-                <div class="image-container">
-                    <img src="assets/cesta-do.jpg" alt="Home">
-                </div>
-                <div class="content">
-                    <h2>Cesta do Scheaditz</h2>
-                    <p>Prave prejizdime hranice a vidime nejaky random hory</p>
-                </div>
-            </div>
-            <div class="slide work work1w">
-                <div class="image-container">
-                    <img src="assets/w1-wd1.jpg" alt="Work 1w">
-                </div>
-                <div class="content">
-                    <h2>Dalem prezentaci kterou ted prohlizite</h2>
-                    <p>Vsichni to jedou pres AI</p>
-                </div>
-            </div>
-            <div class="slide work work2w">
-                <div class="image-container">
-                    <img src="assets/pg.webp" alt="Work 2w">
-                </div>
-                <div class="content">
-                    <h2>Work - 2w</h2>
-                    <p>Description of 2-week work.</p>
-                </div>
-            </div>
-            <div class="slide culture culture-leipzig">
-                <div class="image-container">
-                    <img src="assets/nadrazi-markt.jpg" alt="Leipzig">
-                </div>
-                <div class="content">
-                    <h2>Nadrazni zastavka v Lipsku, Markt</h2>
-                    <p>Prislo mi zajmave jak vsude maji vysoke stropy</p>
-                </div>
-            </div>
-            <div class="slide culture culture-leipzig">
-                <a href="./assets/socha-gete.jpg" target="_blank">
-                    <div class="image-container">
-                    <img src="assets/socha-gete.jpg" alt="Leipzig">
-                </div>
-                </a>
-                
-                <div class="content">
-                    <h2>Nejdriv jsme meli zastavku u pamatniku <strong>Johann Wolfgang von Goethe</strong></h2>
-                    <p>On tam jezdil hrat pro bohate lidi protoze meli hodne penez</p>
-                </div>
-            </div>
-            <div class="slide culture culture-leipzig">
-                <div class="image-container">
-                    <img src="assets/2nejstarsi-restaurace.jpg" alt="2nejstarsi-restaurace">
-                </div>
-                <div class="content">
-                    <h2>Budova ve ktere je 2. nejstarsi restaurace v evrope</h2>
-                    <p>Tato budova byla postavena kolem roku 1900 a v jejim podzemi se 2. nej. restaurace v evrope, ktera slavi tento rok 500 let.  </p>
-                </div>
-            </div>
-            <div class="slide culture culture-leipzig">
-                <a href="./assets/oltar-kostel.jpg">
-                <div class="image-container">
-                    <img src="assets/oltar-kostel.jpg" alt="2nejstarsi-restaurace">
-                </div>
-                </a>
-                <div class="content">
-                    <h2>Oltar kostela</h2>
-                </div>
-            </div>
-            <div class="slide culture culture-berlin">
-                <div class="image-container">
-                    <img src="assets/berlin.jpeg" alt="Berlin">
-                </div>
-                <div class="content">
-                    <h2>Culture - Berlin</h2>
-                    <p>Explore Berlin's culture.</p>    
-                </div>
-            </div>
-            <div class="slide freetime">
-                <div class="image-container">
-                    <img src="assets/pg.webp" alt="Freetime">
-                </div>
-                <div class="content">
-                    <h2>Freetime</h2>   
-                    <p>Enjoy your free time.</p>
-                </div>
-            </div>
-        </div>
+
+    <div class="slides-wrapper" id="slidesWrapper"></div>
+    <div id="dotsWrapper"></div>
+
 
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </div>

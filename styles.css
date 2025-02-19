@@ -40,7 +40,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;  
+    background-color: #ffffff;
     min-width: 130px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -85,8 +85,21 @@ body {
     min-width: 100%;
     display: none;
     flex-direction: column;
+    transform: translateY(10px); /* You can adjust this for a different effect */
+    transition: opacity 2s ease, transform 2s ease; /* Smooth fade-in and slide-up */    opacity: 0;  /* Set opacity to 0 initially */
 }
 
+/* Make the first slide visible by default */
+.slide.active {
+    opacity: 1;
+    display: block;
+    transform: translateY(0); /* Final position after transition */
+
+}
+.slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* Image Section */
 .image-container {
     height: 75vh; /* Full-screen frame */
@@ -94,11 +107,10 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin:0 auto;
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.9); /* Prevents white gaps */
     border-radius: 10px;
-    padding-bottom:50px ;
-
+    padding-bottom: 50px;
 }
 
 .image-container img {
@@ -106,7 +118,7 @@ body {
     max-height: 100%;
     object-fit: contain; /* Ensures full image is visible */
     display: block;
-    margin-bottom:  200px;
+    margin-bottom: 200px;  /* Removed large margin-bottom */
 }
 
 /* Content Section */
@@ -136,8 +148,8 @@ body {
     transition: background 0.3s;
 }
 
-.prev { left: 20px; }
-.next { right: 20px; }
+.prev { left: 20px; z-index: 999;}
+.next { right: 20px; z-index: 999;}
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.2);

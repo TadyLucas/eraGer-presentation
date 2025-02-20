@@ -45,6 +45,16 @@ const slidesData = {
                 image: 'assets/w1-wd1.jpg',
                 title: 'Dával jsem prezentaci, kterou teď prohlížíte',
                 description: 'Všichni to dělají přes AI.',
+            },
+            {
+                image: 'assets/pg.webp',
+                title: 'Zapojovani zasuvek',
+                description: ''
+            },
+            {
+                image: 'assets/pg.webp',
+                title: 'Zapojovani svetel',
+                description: ''
             }
         ],
         'work2w': [
@@ -95,9 +105,19 @@ const slidesData = {
     freetime: [
         {
             image: 'assets/pg.webp',
+            title: 'Hrani ve VR',
+            description: 'Hrali jsme hru strilecku ve VR'
+        },
+        {
+            image: 'assets/pg.webp',
             title: 'Volný čas',
             description: 'Programovani v C a C++',
         },
+        {
+            image: 'assets/pg.webp',
+            title: 'Jsem jiny :D',
+            description: 'Accually jsem si uvedomil ze nemuzu delat to co delaji vsichni, skola je totalni klauniada. Poslouchal jsem podast od "Diary of CEO" s MrBeast a prijede mi ze celkem dost toho mame spolecneho v detstvi.'
+        }
     ]
 };
 
